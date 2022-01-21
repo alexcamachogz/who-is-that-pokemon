@@ -1,7 +1,7 @@
 <template>
   <h1>¿Quién es este pokémon?</h1>
-  <pokemon-picture/>
-  <pokemon-options/>
+  <PokemonPicture :pokemon-id="251" :show-pokemon="true"/>
+  <PokemonOptions/>
 </template>
 
 <script>
