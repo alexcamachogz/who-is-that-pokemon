@@ -1,8 +1,11 @@
 import pokeApi from '../pages/api/pokemonApi'
 
 const getPokemons = () => {
-  const pokeArray = Array.from(Array(650))
-  return pokeArray.map((_, index) => index + 1)
+  const randoms = []
+  for (let index = 0; index < 4; index++) {
+    randoms.push(Math.floor(Math.random() * 650))
+  }
+  return randoms
 }
 
 const getPokemonsNames = async ([pokeOptA, pokeOptB, pokeOptC, pokeOptD] = []) => {
@@ -24,7 +27,7 @@ const getPokemonsNames = async ([pokeOptA, pokeOptB, pokeOptC, pokeOptD] = []) =
 }
 
 const getPokemonOptions = async () => {
-  const mixedPokemons = getPokemons().sort(() => Math.random() - 0.5)
+  const mixedPokemons = getPokemons()
   const pokeNames = await getPokemonsNames(mixedPokemons.splice(0, 4))
   return pokeNames
 }
