@@ -2,7 +2,7 @@
   <div class="options-container">
     <ul>
       <li
-        v-for="{name, id} in pokemons"
+        v-for="{name, id} in pokemonList"
         :key="id">
         {{name.charAt(0).toUpperCase() + name.slice(1)}}
       </li>
@@ -13,7 +13,7 @@
 <script>
 export default {
   props: {
-    pokemons: {
+    pokemonList: {
       type: Array,
       require: true
     }
