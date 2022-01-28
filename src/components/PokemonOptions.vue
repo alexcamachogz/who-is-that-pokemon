@@ -3,8 +3,9 @@
     <ul>
       <li
         v-for="{name, id} in pokemonList"
-        :key="id">
-        {{name.charAt(0).toUpperCase() + name.slice(1)}}
+        :key="id"
+        @click="decision(id)">
+        {{name}}
       </li>
     </ul>
   </div>
@@ -16,6 +17,16 @@ export default {
     pokemonList: {
       type: Array,
       require: true
+    },
+    election: {
+      type: Boolean,
+      require: true
+    }
+  },
+  methods: {
+    decision (pokeId) {
+      if (this.election) return
+      this.$emit('selectPoke', pokeId)
     }
   }
 }
@@ -24,7 +35,9 @@ export default {
 <style scoped>
   ul {
     list-style-type: none;
+    width: 300px;
   }
+
   li {
     background-color: white;
     border-radius: 5px;
@@ -32,6 +45,8 @@ export default {
     cursor: pointer;
     margin-bottom: 10px;
     width: 250px;
+    display: block;
+    text-transform: capitalize;
   }
 
   li:hover {

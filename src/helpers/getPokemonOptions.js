@@ -3,7 +3,7 @@ import pokeApi from '../pages/api/pokemonApi'
 const getPokemons = () => {
   const randoms = []
   for (let index = 0; index < 4; index++) {
-    randoms.push(Math.floor(Math.random() * 650))
+    randoms.push(Math.floor(Math.random() * 649))
   }
   return randoms
 }
