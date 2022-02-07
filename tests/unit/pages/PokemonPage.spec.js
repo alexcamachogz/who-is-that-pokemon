@@ -34,4 +34,48 @@ describe('PokemonPage Component', () => {
 
     expect(wrapper.html()).toMatchSnapshot()
   })
+
+  test('Should be show PokemonPicture y PokemonOption components', () => {
+    const wrapper = shallowMount(PokemonPage, {
+      data () {
+        return {
+          pokeArray: pokemons,
+          pokemon: pokemons[0],
+          showPokemon: false,
+          showAnswer: false,
+          message: ''
+        }
+      }
+    })
+
+    const PokemonPicture = wrapper.find('pokemon-picture-stub')
+    const PokemonOption = wrapper.find('pokemon-options-stub')
+
+    expect(PokemonPicture.exists()).toBeTruthy()
+    expect(PokemonOption.exists()).toBeTruthy()
+    expect(PokemonPicture.attributes('pokemonid')).toBe('1')
+    expect(PokemonOption.attributes('pokemonlist')).toBeTruthy()
+  })
+
+  test('Check answer', async () => {
+    const wrapper = shallowMount(PokemonPage, {
+      data () {
+        return {
+          pokeArray: pokemons,
+          pokemon: pokemons[0],
+          showPokemon: false,
+          showAnswer: false,
+          message: ''
+        }
+      }
+    })
+
+    await wrapper.vm.checkAnswer(1)
+    expect(wrapper.find('h2').exists()).toBeTruthy()
+    expect(wrapper.vm.showPokemon).toBeTruthy()
+    expect(wrapper.find('h2').text()).toBe(`Sí, es un ${pokemons[0].name}`)
+
+    await wrapper.vm.checkAnswer(10)
+    expect(wrapper.vm.message).toBe(`No, es un ${pokemons[0].name}`)
+  })
 })

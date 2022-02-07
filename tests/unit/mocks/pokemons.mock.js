@@ -1,6 +1,6 @@
 export const pokemons = [
-  { name: 'bulbasaur', id: 1 },
-  { name: 'ivysaur', id: 2 },
-  { name: 'venusaur', id: 3 },
-  { name: 'charmander', id: 4 }
+  { name: 'Bulbasaur', id: 1 },
+  { name: 'Ivysaur', id: 2 },
+  { name: 'Venusaur', id: 3 },
+  { name: 'Charmander', id: 4 }
 ]

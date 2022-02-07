@@ -2,7 +2,7 @@
 
 exports[`PokemonPage Component Should be match with the snapshot 1`] = `<h1>Cargando...</h1>`;
 
-exports[`PokemonPage Component Should be match with the snapshot when pokemon loads 1`] = `
+exports[`PokemonPage Component Should be match with the snapshot when pokemon load 1`] = `
 <div class="game-container">
   <h1>¿Quién es este pokémon?</h1>
   <div class="game">

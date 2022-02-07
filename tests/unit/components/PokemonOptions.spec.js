@@ -23,10 +23,10 @@ describe('PokemonOptions Component', () => {
 
   test('Should be show correctly the 4 options', () => {
     expect(liTags.length).toBe(4)
-    expect(liTags[0].text()).toBe('bulbasaur')
-    expect(liTags[1].text()).toBe('ivysaur')
-    expect(liTags[2].text()).toBe('venusaur')
-    expect(liTags[3].text()).toBe('charmander')
+    expect(liTags[0].text()).toBe('Bulbasaur')
+    expect(liTags[1].text()).toBe('Ivysaur')
+    expect(liTags[2].text()).toBe('Venusaur')
+    expect(liTags[3].text()).toBe('Charmander')
   })
 
   test('Should be emit "selection" with their own params when clicked', () => {
