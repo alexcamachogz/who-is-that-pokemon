@@ -24,7 +24,7 @@ You can see the project here → [Pokemon Game](https://pokemon.alexcamachogz.te
   Preview
 </h2>
 
-| Game |  |
+| Question | Answer |
 | --- | ----------- |
 | <img src="images/round.png"> | <img src="images/result.png"> |
 
