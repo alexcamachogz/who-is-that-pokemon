@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonPage Component Should be match with the snapshot 1`] = `<h1>Cargando...</h1>`;
+
+exports[`PokemonPage Component Should be match with the snapshot when pokemon loads 1`] = `
+<div class="game-container">
+  <h1>¿Quién es este pokémon?</h1>
+  <div class="game">
+    <pokemon-picture-stub pokemonid="1" showpokemon="false"></pokemon-picture-stub>
+    <pokemon-options-stub pokemonlist="[object Object],[object Object],[object Object],[object Object]" election="false"></pokemon-options-stub>
+    <h3>Puntaje: 0</h3>
+  </div>
+  <!--v-if-->
+</div>
+`;
